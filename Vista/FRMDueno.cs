@@ -110,5 +110,7 @@ namespace AgroganaderaMiFincaGui
             }//fin if
         }//fin LlenarComboBoxFincas
 
+
+
     }//fin clase FRMDueno
 }
