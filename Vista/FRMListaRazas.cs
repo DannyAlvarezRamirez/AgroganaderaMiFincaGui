@@ -18,8 +18,25 @@ namespace AgroganaderaMiFincaGui
         public FRMListaRazas()
         {
             InitializeComponent();
+            LlenarDataGridViewRazas();
         }//fin constructor
 
+        //metodos
+        /*
+         * LlenarDataGridViewRazas = este metodo se encarga de llenar el LlenarDataGridViewRazas
+         * con sus respectivos registros de razas
+         */
+        public void LlenarDataGridViewRazas()
+        {
+            try
+            {
+                this.dataGridViewRazas.DataSource = ControladorFRMRaza.miListaRaza;
+            }//fin try
+            catch (Exception ex)
+            {
+                MessageBox.Show("Aun no hay razas y/o fincas registradas.");
+            }//fin catch
+        }//fin LlenarDataGridViewRazas
         /*
          * este metodo se encarga de esconder el formulario actual
          */

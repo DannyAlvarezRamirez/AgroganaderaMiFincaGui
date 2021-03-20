@@ -43,7 +43,7 @@
             // 
             // buttonIrAlMenuPrincipal
             // 
-            this.buttonIrAlMenuPrincipal.Location = new System.Drawing.Point(985, 773);
+            this.buttonIrAlMenuPrincipal.Location = new System.Drawing.Point(1070, 916);
             this.buttonIrAlMenuPrincipal.Name = "buttonIrAlMenuPrincipal";
             this.buttonIrAlMenuPrincipal.Size = new System.Drawing.Size(150, 58);
             this.buttonIrAlMenuPrincipal.TabIndex = 0;
@@ -125,7 +125,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1147, 843);
+            this.ClientSize = new System.Drawing.Size(1274, 1046);
             this.Controls.Add(this.labelListaAnimales);
             this.Controls.Add(this.labelHembras);
             this.Controls.Add(this.labelMachos);
@@ -134,7 +134,9 @@
             this.Controls.Add(this.dataGridViewAnimales);
             this.Controls.Add(this.buttonClasificacion);
             this.Controls.Add(this.buttonIrAlMenuPrincipal);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FRMClasificacionAnimales";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modulo Clasificacion de Animales";
             this.Load += new System.EventHandler(this.FRMClasificacionAnimales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAnimales)).EndInit();
