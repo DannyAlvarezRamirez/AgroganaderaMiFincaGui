@@ -59,6 +59,7 @@ namespace AgroganaderaMiFincaGui
                     if (ControladorFRMAnimal.miListaAnimal.ElementAt(i).SexoAnimal.Equals("Macho"))
                     {
                         miListaAnimalesMachos.Add(ControladorFRMAnimal.miListaAnimal.ElementAt(i));
+                        //this.dataGridViewAnimales.Rows.RemoveAt(i);
                     }//fin if
 
                 }//fin for
@@ -67,19 +68,12 @@ namespace AgroganaderaMiFincaGui
                 this.dataGridViewMachos.DataSource = miListaAnimalesMachos;
 
                 //await Task.Delay(5);
-                //eliminar del datagridviewanimales los sexo macho
+                ////eliminar del datagridviewanimales los sexo macho
                 //for (int i = 0; i < this.dataGridViewAnimales.RowCount; i++)
                 //{
                 //    if (this.dataGridViewAnimales.Rows[i].Cells[1].Value.ToString().Equals("Macho"))
                 //    {
-                //        this.dataGridViewAnimales.Rows[i].Cells[0].Value = "";
-                //        this.dataGridViewAnimales.Rows[i].Cells[1].Value = "";
-                //        this.dataGridViewAnimales.Rows[i].Cells[2].Value = "";
-                //        this.dataGridViewAnimales.Rows[i].Cells[3].Value = "";
-                //        this.dataGridViewAnimales.Rows[i].Cells[4].Value = "";
-                //        this.dataGridViewAnimales.Rows[i].Cells[5].Value = "";
-                //        this.dataGridViewAnimales.Rows[i].Cells[5].Value = null;
-                //        this.dataGridViewAnimales.Rows[i].Cells[5].Value = null;
+                //        this.dataGridViewAnimales.Rows.RemoveAt(i);
                 //    }//fin if
                 //}//fin for
 
@@ -108,6 +102,7 @@ namespace AgroganaderaMiFincaGui
                     if (ControladorFRMAnimal.miListaAnimal.ElementAt(i).SexoAnimal.Equals("Hembra"))
                     {
                         miListaAnimalesHembras.Add(ControladorFRMAnimal.miListaAnimal.ElementAt(i));
+                        //this.dataGridViewAnimales.Rows.RemoveAt(i);
                     }//fin if
 
                 }//fin for
@@ -115,22 +110,15 @@ namespace AgroganaderaMiFincaGui
                 this.dataGridViewHembras.DataSource = miListaAnimalesHembras;
 
                 //await Task.Delay(5);
-                //eliminar del datagridviewanimales los sexo hembra
+                ////eliminar del datagridviewanimales los sexo hembra
                 //for (int i = 0; i < this.dataGridViewAnimales.RowCount; i++)
                 //{
                 //    if (this.dataGridViewAnimales.Rows[i].Cells[1].Value.ToString().Equals("Hembra"))
                 //    {
-                //        this.dataGridViewAnimales.Rows[i].Cells[0].Value = "";
-                //        this.dataGridViewAnimales.Rows[i].Cells[1].Value = "";
-                //        this.dataGridViewAnimales.Rows[i].Cells[2].Value = "";
-                //        this.dataGridViewAnimales.Rows[i].Cells[3].Value = "";
-                //        this.dataGridViewAnimales.Rows[i].Cells[4].Value = "";
-                //        this.dataGridViewAnimales.Rows[i].Cells[5].Value = "";
-                //        this.dataGridViewAnimales.Rows[i].Cells[5].Value = null;
-                //        this.dataGridViewAnimales.Rows[i].Cells[5].Value = null;
+                //        this.dataGridViewAnimales.Rows.RemoveAt(i);
                 //    }//fin if
                 //}//fin for
-                
+
             }//fin try
             catch (Exception ex)
             {
