@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 //autor: Dany Esteban Alvarez Ramirez
-namespace AgroganaderaMiFincaGui.Vista
+namespace AgroganaderaMiFincaGui
 {
     /*
      * esta clase se encarga de desplegar la interfaz de usuario para 
@@ -48,8 +48,23 @@ namespace AgroganaderaMiFincaGui.Vista
         {
             try
             {
-                //
-                //this.dataGridViewMachos.DataSource = ControladorFRMAnimal.miListaAnimal;
+                List<ObjetoAnimal> miListaAnimalesMachos = new List<ObjetoAnimal>();
+
+                //llenar datagridviewMachos
+                //recorrer la lista con la que se llena el datagridviewanimales
+                for (int i = 0; i < ControladorFRMAnimal.miListaAnimal.Count; i++)
+                {
+                    if (ControladorFRMAnimal.miListaAnimal.ElementAt(i).SexoAnimal.Equals("Macho"))
+                    {
+                        miListaAnimalesMachos.Add(ControladorFRMAnimal.miListaAnimal.ElementAt(i));
+                        ControladorFRMAnimal.miListaAnimal.RemoveAt(i);
+                    }//fin if
+
+                }//fin for
+
+                //llenar datagridviewmachos
+                this.dataGridViewMachos.DataSource = miListaAnimalesMachos;
+
             }//fin try
             catch (Exception ex)
             {
@@ -65,8 +80,22 @@ namespace AgroganaderaMiFincaGui.Vista
         {
             try
             {
-                //
-                //this.dataGridViewHembras.DataSource = ControladorFRMAnimal.miListaAnimal;
+                List<ObjetoAnimal> miListaAnimalesHembras = new List<ObjetoAnimal>();
+
+                //llenar datagridviewhembras
+                //recorrer la lista con la que se llena el datagridviewanimales
+                for (int i = 0; i < ControladorFRMAnimal.miListaAnimal.Count; i++)
+                {
+                    if (ControladorFRMAnimal.miListaAnimal.ElementAt(i).SexoAnimal.Equals("Hembra"))
+                    {
+                        miListaAnimalesHembras.Add(ControladorFRMAnimal.miListaAnimal.ElementAt(i));
+                        ControladorFRMAnimal.miListaAnimal.RemoveAt(i);
+                    }//fin if
+
+                }//fin for
+
+                //llenar datagridviewhembras
+                this.dataGridViewHembras.DataSource = miListaAnimalesHembras;
             }//fin try
             catch (Exception ex)
             {
@@ -104,7 +133,8 @@ namespace AgroganaderaMiFincaGui.Vista
          */
         private void buttonClasificacion_Click(object sender, EventArgs e)
         {
-
+            LlenarDataGridViewMachos();
+            LlenarDataGridViewHembras();
         }//fin buttonClasificacion_Click
     }//fin clase FRMClasificacionAnimales
 }
