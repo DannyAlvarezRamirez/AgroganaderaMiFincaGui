@@ -49,18 +49,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controlador\ControladorClasificacionAnimales.cs" />
+    <Compile Include="Controlador\ControladorFRMAnimal.cs" />
+    <Compile Include="Controlador\ControladorFRMDueno.cs" />
+    <Compile Include="Controlador\ControladorFRMEmpleado.cs" />
     <Compile Include="Controlador\ControladorFRMFinca.cs" />
+    <Compile Include="Controlador\ControladorFRMRaza.cs" />
     <Compile Include="Modelo\ObjetoAnimal.cs" />
     <Compile Include="Modelo\ObjetoDueno.cs" />
     <Compile Include="Modelo\ObjetoEmpleado.cs" />
     <Compile Include="Modelo\ObjetoFinca.cs" />
     <Compile Include="Modelo\ObjetoPersona.cs" />
     <Compile Include="Modelo\ObjetoRaza.cs" />
+    <Compile Include="Vista\FRMAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FRMAnimal.Designer.cs">
+      <DependentUpon>FRMAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FRMClasificacionAnimales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FRMClasificacionAnimales.Designer.cs">
+      <DependentUpon>FRMClasificacionAnimales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FRMDueno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FRMDueno.Designer.cs">
+      <DependentUpon>FRMDueno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FRMEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FRMEmpleado.Designer.cs">
+      <DependentUpon>FRMEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\FRMFinca.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\FRMFinca.Designer.cs">
       <DependentUpon>FRMFinca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FRMListaAnimales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FRMListaAnimales.Designer.cs">
+      <DependentUpon>FRMListaAnimales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FRMListaDuenos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FRMListaDuenos.Designer.cs">
+      <DependentUpon>FRMListaDuenos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FRMListaEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FRMListaEmpleados.Designer.cs">
+      <DependentUpon>FRMListaEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FRMListaRazas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FRMListaRazas.Designer.cs">
+      <DependentUpon>FRMListaRazas.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\FRMMenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -74,10 +127,40 @@
     <Compile Include="Vista\FRMListaFincas.Designer.cs">
       <DependentUpon>FRMListaFincas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Program.cs" />
+    <Compile Include="Controlador\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\FRMRaza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FRMRaza.Designer.cs">
+      <DependentUpon>FRMRaza.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Vista\FRMAnimal.resx">
+      <DependentUpon>FRMAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FRMClasificacionAnimales.resx">
+      <DependentUpon>FRMClasificacionAnimales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FRMDueno.resx">
+      <DependentUpon>FRMDueno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FRMEmpleado.resx">
+      <DependentUpon>FRMEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\FRMFinca.resx">
       <DependentUpon>FRMFinca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FRMListaAnimales.resx">
+      <DependentUpon>FRMListaAnimales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FRMListaDuenos.resx">
+      <DependentUpon>FRMListaDuenos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FRMListaEmpleados.resx">
+      <DependentUpon>FRMListaEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FRMListaRazas.resx">
+      <DependentUpon>FRMListaRazas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FRMMenuPrincipal.resx">
       <DependentUpon>FRMMenuPrincipal.cs</DependentUpon>
@@ -93,6 +176,9 @@
     </Compile>
     <EmbeddedResource Include="Vista\FRMListaFincas.resx">
       <DependentUpon>FRMListaFincas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FRMRaza.resx">
+      <DependentUpon>FRMRaza.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -43,7 +43,7 @@ namespace AgroganaderaMiFincaGui
         }//fin LlenarDataGridViewFincas
 
         /*
-         * este metodo se encarga de cerrar el formulario actual y abrir el menu principal
+         * este metodo se encarga de cesconder el formulario actual
          */
         private void FRMListaFincas_Load(object sender, EventArgs e)
         {
@@ -51,7 +51,7 @@ namespace AgroganaderaMiFincaGui
         }//fin FRMListaFincas_Load
 
         /*
-         * este metodo se encarga de cerrar el formulario actual y abrir el menu principal 
+         * este metodo se encarga de esconder el formulario actual
          */
         private void cerrarFormulario(object sender, FormClosedEventArgs e)
         {

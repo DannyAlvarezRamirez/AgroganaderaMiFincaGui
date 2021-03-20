@@ -16,7 +16,7 @@ namespace AgroganaderaMiFincaGui
     static class ControladorFRMFinca
     {
         //atributos y referencias
-        static int posicion;static ObjetoFinca miObjetoFinca;
+        static ObjetoFinca miObjetoFinca;
         public static List<ObjetoFinca> miListaFinca = new List<ObjetoFinca>();
 
         //metodos
@@ -26,9 +26,18 @@ namespace AgroganaderaMiFincaGui
         public static string RegistrarFinca(ObjetoFinca miObjetoFinca)
         {
             string salida = "";
-            miListaFinca.Add(miObjetoFinca);
-            salida = "Se agrego la finca correctamente";
-            return salida;// + "\n" + this.GuardarEnJson(miObjetoFinca);
+            if (BuscarNumeroFinca(miObjetoFinca.NumeroFinca))
+            {
+                salida = "Ya existe un registro con ese mismo numero de finca. Por favor" +
+                    " vuelva a intentarlo.";
+            }//fin if 
+            else
+            {
+                miListaFinca.Add(miObjetoFinca);
+                salida = "Se agrego la finca correctamente";
+                
+            }//fin else 
+            return salida;
         }//fin RegistrarFinca
 
         /*
@@ -42,11 +51,9 @@ namespace AgroganaderaMiFincaGui
 
             for (int i = 0; i < miListaFinca.Count; i++)
             {
-                if (miListaFinca.ElementAt(index: numeroFinca).Equals(numeroFinca))
+                if (miListaFinca.ElementAt(i).NumeroFinca.Equals(numeroFinca))
                 {
                     encontrado = true;
-                    miObjetoFinca = miListaFinca.ElementAt(index: numeroFinca);//objetoFinca
-                    posicion = i;
                 }//fin if verdad
             }//fin
 
@@ -61,6 +68,24 @@ namespace AgroganaderaMiFincaGui
             miObjetoFinca = new ObjetoFinca(numeroFinca, nombreFinca, direccionFinca, telefonoFinca, tamanoFinca);
             return miObjetoFinca;
         }//fin GetLlenarObjetoFinca
+
+        /*
+         * este metodo se encarga de buscar un objeto finca en especifico y devolverlo
+         */
+        public static ObjetoFinca BuscarFinca(int numeroFinca)
+        {
+            ObjetoFinca miObjetoFinca = null;
+            for (int i = 0; i < ControladorFRMFinca.miListaFinca.Count; i++)
+            {
+                if (ControladorFRMFinca.miListaFinca.ElementAt(i).Equals(numeroFinca))
+                {
+                    miObjetoFinca = ControladorFRMFinca.miListaFinca.ElementAt(i);
+                }//fin if
+            }//fin for
+
+            return miObjetoFinca;
+
+        }//fin BuscarFinca
 
     }//fin clase ControladorFRMFinca
 }

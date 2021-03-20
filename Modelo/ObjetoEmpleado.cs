@@ -9,11 +9,6 @@ namespace AgroganaderaMiFincaGui
         //atributos
         private double dbSalarioEmpleado;
 
-        //constructores
-        //public ObjetoEmpleado()
-        //{
-        //    this.strSalarioEmpleado = 0.0;
-        //}//fin constructor sin parametros: redundante
         public ObjetoEmpleado(int identificacionPersona, string nombrePersona, string primerApellido, string segundoApellido, 
             double salarioEmpleado)
             :base(identificacionPersona, nombrePersona, primerApellido, segundoApellido)

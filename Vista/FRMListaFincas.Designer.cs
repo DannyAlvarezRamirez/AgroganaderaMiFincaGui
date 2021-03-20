@@ -49,7 +49,7 @@
             this.ClientSize = new System.Drawing.Size(845, 450);
             this.Controls.Add(this.dataGridViewFincas);
             this.Name = "FRMListaFincas";
-            this.Text = "Lista Fincas";
+            this.Text = "Modulo Lista de Fincas";
             this.Load += new System.EventHandler(this.FRMListaFincas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFincas)).EndInit();
             this.ResumeLayout(false);

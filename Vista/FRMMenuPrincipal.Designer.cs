@@ -33,15 +33,15 @@
             this.fincaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.duenoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.razaDeAnimaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.razaDeAnimalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.animalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clasificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fincasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.duenosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empleadosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.razasDeAnimalesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.animalesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.clasificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +65,7 @@
             this.fincaToolStripMenuItem,
             this.duenoToolStripMenuItem,
             this.empleadoToolStripMenuItem,
-            this.razaDeAnimaleToolStripMenuItem,
+            this.razaDeAnimalToolStripMenuItem,
             this.animalToolStripMenuItem});
             this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
             this.registrarToolStripMenuItem.Size = new System.Drawing.Size(97, 29);
@@ -83,18 +83,21 @@
             this.duenoToolStripMenuItem.Name = "duenoToolStripMenuItem";
             this.duenoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.duenoToolStripMenuItem.Text = "Dueños";
+            this.duenoToolStripMenuItem.Click += new System.EventHandler(this.duenoToolStripMenuItem_Click);
             // 
             // empleadoToolStripMenuItem
             // 
             this.empleadoToolStripMenuItem.Name = "empleadoToolStripMenuItem";
             this.empleadoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.empleadoToolStripMenuItem.Text = "Empleados";
+            this.empleadoToolStripMenuItem.Click += new System.EventHandler(this.empleadoToolStripMenuItem_Click);
             // 
-            // razaDeAnimaleToolStripMenuItem
+            // razaDeAnimalToolStripMenuItem
             // 
-            this.razaDeAnimaleToolStripMenuItem.Name = "razaDeAnimaleToolStripMenuItem";
-            this.razaDeAnimaleToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.razaDeAnimaleToolStripMenuItem.Text = "Razas de animales";
+            this.razaDeAnimalToolStripMenuItem.Name = "razaDeAnimalToolStripMenuItem";
+            this.razaDeAnimalToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.razaDeAnimalToolStripMenuItem.Text = "Razas de animales";
+            this.razaDeAnimalToolStripMenuItem.Click += new System.EventHandler(this.razaDeAnimalToolStripMenuItem_Click);
             // 
             // animalToolStripMenuItem
             // 
@@ -114,42 +117,45 @@
             this.mostrarToolStripMenuItem.Size = new System.Drawing.Size(173, 29);
             this.mostrarToolStripMenuItem.Text = "Mostrar la Lista de";
             // 
-            // clasificarToolStripMenuItem
-            // 
-            this.clasificarToolStripMenuItem.Name = "clasificarToolStripMenuItem";
-            this.clasificarToolStripMenuItem.Size = new System.Drawing.Size(97, 29);
-            this.clasificarToolStripMenuItem.Text = "Clasificar";
-            // 
             // fincasToolStripMenuItem
             // 
             this.fincasToolStripMenuItem.Name = "fincasToolStripMenuItem";
-            this.fincasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.fincasToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
             this.fincasToolStripMenuItem.Text = "Fincas";
             this.fincasToolStripMenuItem.Click += new System.EventHandler(this.fincasToolStripMenuItem_Click);
             // 
             // duenosToolStripMenuItem
             // 
             this.duenosToolStripMenuItem.Name = "duenosToolStripMenuItem";
-            this.duenosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.duenosToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
             this.duenosToolStripMenuItem.Text = "Duenos";
+            this.duenosToolStripMenuItem.Click += new System.EventHandler(this.duenosToolStripMenuItem_Click);
             // 
             // empleadosToolStripMenuItem1
             // 
             this.empleadosToolStripMenuItem1.Name = "empleadosToolStripMenuItem1";
-            this.empleadosToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.empleadosToolStripMenuItem1.Size = new System.Drawing.Size(261, 34);
             this.empleadosToolStripMenuItem1.Text = "Empleados";
+            this.empleadosToolStripMenuItem1.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
             // razasDeAnimalesToolStripMenuItem1
             // 
             this.razasDeAnimalesToolStripMenuItem1.Name = "razasDeAnimalesToolStripMenuItem1";
             this.razasDeAnimalesToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
             this.razasDeAnimalesToolStripMenuItem1.Text = "Razas de Animales";
+            this.razasDeAnimalesToolStripMenuItem1.Click += new System.EventHandler(this.razasDeAnimalesToolStripMenuItem_Click);
             // 
             // animalesToolStripMenuItem1
             // 
             this.animalesToolStripMenuItem1.Name = "animalesToolStripMenuItem1";
-            this.animalesToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.animalesToolStripMenuItem1.Size = new System.Drawing.Size(261, 34);
             this.animalesToolStripMenuItem1.Text = "Animales";
+            // 
+            // clasificarToolStripMenuItem
+            // 
+            this.clasificarToolStripMenuItem.Name = "clasificarToolStripMenuItem";
+            this.clasificarToolStripMenuItem.Size = new System.Drawing.Size(97, 29);
+            this.clasificarToolStripMenuItem.Text = "Clasificar";
             // 
             // FRMMenuPrincipal
             // 
@@ -177,7 +183,7 @@
         private System.Windows.Forms.ToolStripMenuItem mostrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clasificarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem empleadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem razaDeAnimaleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem razaDeAnimalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem animalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fincasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem duenosToolStripMenuItem;

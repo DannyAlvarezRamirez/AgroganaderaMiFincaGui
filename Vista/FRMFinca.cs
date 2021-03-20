@@ -24,8 +24,7 @@ namespace AgroganaderaMiFincaGui
         }//fin constructor
 
         /*
-         * este metodo se encarga de cerrar el formulario Registrar Finca y despliega 
-         * el formulario o Menu Principal
+         * este metodo se encarga de esconder el formulario Registrar Finca
          */
         private void btnIrAMenuPrincipal_Click(object sender, EventArgs e)
         {
@@ -33,7 +32,7 @@ namespace AgroganaderaMiFincaGui
         }//fin btnIrAMenuPrincipal_Click
 
         /*
-         * este metodo se encarga de cerrar el formulario actual y abrir el menu principal
+         * este metodo se encarga de esconder el formulario actual
          */
         private void FRMFinca_Load(object sender, EventArgs e)
         {
@@ -63,6 +62,8 @@ namespace AgroganaderaMiFincaGui
                         Convert.ToInt32(this.maskedTextBoxNumeroFinca.Text), this.textBoxNombreFinca.Text,
                         this.textBoxDireccionFinca.Text, Convert.ToInt32(this.maskedTextBoxTelefono.Text),
                         Convert.ToInt32(this.maskedTextBoxTamanoFinca.Text))));
+                    //estado inicial
+                    this.EstadoInicial();
                 }//fin if
                 else
                 {
@@ -72,9 +73,23 @@ namespace AgroganaderaMiFincaGui
             }//fin try
             catch(Exception ex) 
             {
-                MessageBox.Show("Ha introducido un valor invalido." + ex.Message);
+                MessageBox.Show("Ha introducido un valor invalido o el numero de finca ya existe." +
+                    " Por favor, vuelva a intentarlo.");
             }//fin catch
             
         }//fin btnRegistrar_Click
-    }//fin clase Finca
+
+        /*
+         * este metodo se encarga de dejar la interfaza en su estado inicial
+         */
+        public void EstadoInicial()
+        {
+            this.maskedTextBoxNumeroFinca.ResetText();
+            this.maskedTextBoxTamanoFinca.ResetText();
+            this.maskedTextBoxTelefono.ResetText();
+            this.textBoxNombreFinca.ResetText();
+            this.textBoxDireccionFinca.ResetText();
+        }//fin EstadoInicial
+
+    }//fin clase FRMFinca
 }

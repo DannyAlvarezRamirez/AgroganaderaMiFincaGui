@@ -11,30 +11,26 @@ using System.Windows.Forms;
 namespace AgroganaderaMiFincaGui
 {
     /*
- * Este esta clase despliega la interfaz de usuario que contiene 
- * el menu principal de la aplicacion que donde existen
- * varias opciones con las que el usuario interactua, ademas la opcion de salir del sistema. 
- * 
- */
+     * Este esta clase despliega la interfaz de usuario que contiene 
+     * el menu principal de la aplicacion que donde existen
+     * varias opciones con las que el usuario interactua, ademas la opcion de salir del sistema.
+     */
     public partial class FRMMenuPrincipal : Form
     {
         //atributos y referencias
         FRMFinca miFRMFinca;
         FRMListaFincas miFRMListaFincas;
+        FRMDueno miFRMDueno;
+        FRMListaDuenos miFRMListaDuenos;
+        FRMEmpleado miFRMEmpleado;
+        FRMListaEmpleados miFRMListaEmpleados;
+        FRMRaza miFRMRaza;
+        FRMListaRazas miFRMListaRazas;
         public FRMMenuPrincipal()
         {
             InitializeComponent();
         }//fin constructor
 
-        /*
-         * este metodo se acciona al dar click y despliega un nuevo formulario = Registrar Finca
-         */
-        private void fincaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //instancia de formulario Registrar Finca
-            this.miFRMFinca = new FRMFinca();
-            this.miFRMFinca.Show();
-        }//fincaToolStripMenuItem_Click
         /*
          * este metodo se encarga cerrar o no la aplicacion
          */
@@ -64,6 +60,15 @@ namespace AgroganaderaMiFincaGui
         }//fin cerrarFormulario
 
         /*
+         * este metodo se acciona al dar click y despliega un nuevo formulario = Registrar Finca
+         */
+        private void fincaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //instancia de formulario Registrar Finca
+            this.miFRMFinca = new FRMFinca();
+            this.miFRMFinca.Show();
+        }//fincaToolStripMenuItem_Click
+        /*
          * este metodo se acciona al dar click sobre el menu strip mostrar fincas
          * y se encarga de desplegar en una tabla la informacion de los registros
          * Fincas
@@ -73,5 +78,68 @@ namespace AgroganaderaMiFincaGui
             this.miFRMListaFincas = new FRMListaFincas();
             this.miFRMListaFincas.Show();
         }//fin fincasToolStripMenuItem_Click
+
+        /*
+         * este metodo se acciona al dar click y despliega un nuevo formulario = Registrar Dueno
+         */
+        private void duenoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //instancia de formulario Registrar Dueno
+            this.miFRMDueno = new FRMDueno();
+            this.miFRMDueno.Show();
+        }//fin duenoToolStripMenuItem_Click
+
+        /*
+         * este metodo se acciona al dar click sobre el menu strip mostrar duenos
+         * y se encarga de desplegar en una tabla la informacion de los registros
+         * Duenos
+         */
+        private void duenosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.miFRMListaDuenos = new FRMListaDuenos();
+            this.miFRMListaDuenos.Show();
+        }//duenosToolStripMenuItem_Click
+
+        /*
+         * este metodo se acciona al dar click y despliega un nuevo formulario = Registrar Empleado
+         */
+        private void empleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //instancia de formulario Registrar Empleado
+            this.miFRMEmpleado = new FRMEmpleado();
+            this.miFRMEmpleado.Show();
+        }//empleadoToolStripMenuItem_Click
+
+        /*
+         * este metodo se acciona al dar click sobre el menu strip mostrar empleados
+         * y se encarga de desplegar en una tabla la informacion de los registros
+         * Empleados
+         */
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.miFRMListaEmpleados = new FRMListaEmpleados();
+            this.miFRMListaEmpleados.Show();
+        }//fin empleadosToolStripMenuItem1_Click
+
+        /*
+         * este metodo se acciona al dar click y despliega un nuevo formulario = Registrar Raza de Animal
+         */
+        private void razaDeAnimalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //instancia de formulario Registrar Raza
+            this.miFRMRaza = new FRMRaza();
+            this.miFRMRaza.Show();
+        }//fin razaDeAnimalToolStripMenuItem_Click
+
+        /*
+         * este metodo se acciona al dar click sobre el menu strip mostrar razas
+         * y se encarga de desplegar en una tabla la informacion de los registros
+         * Razas
+         */
+        private void razasDeAnimalesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.miFRMListaRazas = new FRMListaRazas();
+            this.miFRMListaRazas.Show();
+        }//fin razasDeAnimalesToolStripMenuItem1_Click
     }//fin clase parcial MenuPrincipal
 }
