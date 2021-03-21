@@ -49,7 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controlador\ControladorClasificacionAnimales.cs" />
     <Compile Include="Controlador\ControladorFRMAnimal.cs" />
     <Compile Include="Controlador\ControladorFRMDueno.cs" />
     <Compile Include="Controlador\ControladorFRMEmpleado.cs" />
